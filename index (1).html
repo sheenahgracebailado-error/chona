@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chona Manolong | Web Designer Portfolio</title>
+  <style>
+    :root {
+      --primary: #ff66b2;
+      --secondary: #66ccff;
+      --bg: #fff0f5;
+      --text: #333;
+      --header-bg: #ffe6f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth; /* smooth scrolling for nav links */
+    }
+
+    /* Front Page Styles */
+    #front-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #front-page h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    #front-page button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: white;
+      color: var(--primary);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #front-page button:hover {
+      background-color: var(--bg);
+    }
+
+    /* Main Content Hidden Initially */
+    #main-content {
+      display: none;
+    }
+
+    nav {
+      background-color: var(--secondary);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 2.5em;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 5px;
+      color: var(--primary);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      max-width: 280px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px #ccc;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--secondary);
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FRONT PAGE -->
+  <div id="front-page">
+    <h1>Welcome to Chona's Portfolio</h1>
+    <p>Web Designer | Frontend Developer | Creative Specialist</p>
+    <button onclick="showPortfolio()">Enter</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content">
+    <nav>
+      <div>🌐 Chona Portfolio</div>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About Me</a>
+      </div>
+    </nav>
+
+    <header id="home">
+      <h1>Chona Manolong</h1>
+      <p>Web Designer | Frontend Developer | Creative Specialist</p>
+      <p>📞 +936 765 2872 | 📧 chonabarotmanolong18@gmail.com</p>
+    </header>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="3.jpg" alt="Project 1">
+        <img src="2.jpg" alt="Project 2">
+        <img src="1.jpg" alt="Project 3">
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Chona Manolong</strong>! I’m a passionate and proactive web designer with over five years of experience, excited to contribute to Studio Shodwe. I aim to apply my expertise in frontend development and visual design to enhance future projects. In a past role, I led the redesign of <em>reallygreatsite.com</em>, which boosted web traffic by 50% and improved overall performance by 20%.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Chona Manolong | Portfolio Website</p>
+    </footer>
+  </div>
+
+  <script>
+    function showPortfolio() {
+      document.getElementById('front-page').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
